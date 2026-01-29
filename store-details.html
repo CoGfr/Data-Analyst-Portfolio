@@ -7,36 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" style="text-decoration: none;">← Retour à l'accueil</a>
+    <header class="project-header">
+        <a href="index.html" class="back-button">← Retour à l'accueil</a>
         <h1>Store Analysis Dashboard</h1>
     </header>
 
     <main class="case-study">
         <section>
-            <h2>Visualisations de données</h2>
-            <p>Voici les résultats clés de l'analyse :</p>
-            
+            <h2>Dashboard Video</h2>
+            <p>Explore the interactive features in this dashboard demo.</p>
+
             <div class="media-container">
-                <img src="assets/Store1.png" alt="Graphique des ventes" class="detail-img">
-                <p class="caption">Note: This project utilizes a synthetic dataset for demonstration purposes and does not represent real-world business performance.</p>
+                <video controls class="project-video">
+                    <source src="assets/store.mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
             </div>
 
             <section>
-                <h2>Aperçus rapides</h2>
+                <h2>Dashboard Interface Gallery</h2>
                 <div class="image-row">
-                    <a href="assets/Store1.png" target="_blank"><img src="assets/Store1.png" alt="Vue 1"></a>
-                    <a href="assets/Store2.png" target="_blank"><img src="assets/Store2.png" alt="Vue 2"></a>
-                    <a href="assets/Store3.png" target="_blank"><img src="assets/Store3.png" alt="Vue 3"></a>
-                    <a href="assets/Store4.png" target="_blank"><img src="assets/Store4.png" alt="Vue 4"></a>
+                    <a href="assets/Store1.png" onclick="openLightbox(event, this.href)"><img src="assets/Store1.png" alt="Vue 1"></a>
+                    <a href="assets/Store2.png" onclick="openLightbox(event, this.href)"><img src="assets/Store2.png" alt="Vue 2"></a>
+                    <a href="assets/Store3.png" onclick="openLightbox(event, this.href)"><img src="assets/Store3.png" alt="Vue 3"></a>
+                    <a href="assets/Store4.png" onclick="openLightbox(event, this.href)"><img src="assets/Store4.png" alt="Vue 4"></a>
                 </div>
             </section>
 
             <h2>File Links</h2>
-            <p>You can download an open the Dashboard here.</p>
-            <a href="https://github.com/CoGfr/Data-Analyst-Store-Analysis/raw/refs/heads/main/Store%20Analysis.pbix" target="_blank" rel="noopener noreferrer">Power Bi</a>
-
+            <p>You can download and open the Dashboard file here.</p>
+            <a href="https://github.com/CoGfr/Data-Analyst-Store-Analysis/raw/refs/heads/main/Store%20Analysis.pbix" target="_blank" rel="noopener noreferrer" class="download-link">
+                Power Bi
+            </a>
         </section>
     </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(event, imgSrc) {
+            event.preventDefault(); // Empêche d'ouvrir l'image dans un nouvel onglet
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
 </body>
 </html>
