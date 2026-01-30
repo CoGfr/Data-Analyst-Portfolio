@@ -230,3 +230,30 @@ h2 {
         width: 47%; /* Deux images par ligne sur mobile */
     }
 }
+
+
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0077b5; /* Bleu officiel LinkedIn */
+    color: white !important;   /* Force le texte en blanc */
+    padding: 12px 24px;
+    border-radius: 50px;       /* Forme pilule moderne */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;         /* Rend le lien plus gros */
+    transition: all 0.3s ease;
+    gap: 10px;                 /* Espace entre le logo et le texte */
+    margin-top: 15px;
+}
+
+.linkedin-btn:hover {
+    background-color: #005582; /* Bleu plus foncé au survol */
+    transform: scale(1.05);    /* Effet de léger grossissement */
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-btn i {
+    font-size: 1.4rem;         /* Logo légèrement plus grand que le texte */
+}
