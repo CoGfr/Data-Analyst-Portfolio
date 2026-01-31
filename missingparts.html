@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Corentin G</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="project-header">
+        <a href="index.html" class="back-button">← Return to Home</a>
+        <h1>Supply Chain Missing Parts Analysis Dashboard</h1>
+    </header>
+
+    <main class="case-study">
+        <section>
+            <h2>Dashboard Video</h2>
+            <p>Explore the interactive features in this dashboard demo.</p>
+
+            <div class="media-container">
+                <video controls class="project-video">
+                    <source src="assets/missingparts.mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+
+            <section>
+                <h2>Dashboard Interface Gallery</h2>
+                <div class="image-row">
+                    <a href="assets/missingparts1.png" onclick="openLightbox(event, this.href)"><img src="assets/missingparts1.png" alt="Vue 1"></a>
+                    <a href="assets/missingparts2.png" onclick="openLightbox(event, this.href)"><img src="assets/missingparts2.png" alt="Vue 1"></a>
+            </section>
+
+            <h2>File Links</h2>
+            <p>You can download and open the Dashboard file here.</p>
+            <a href="https://github.com/CoGfr/Data-Analyst-Customer-Churn-Analysis/raw/refs/heads/main/Customer%20Churn.pbix" target="_blank" rel="noopener noreferrer" class="download-link">
+                Power Bi
+            </a>
+            <p>Tableau - Coming Soon</p>
+            <p>Qlik - Coming Soon</p>
+            <p>Looker Studio - Coming Soon</p>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(event, imgSrc) {
+            event.preventDefault(); // Empêche d'ouvrir l'image dans un nouvel onglet
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
