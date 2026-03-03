@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Corentin G</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="project-header">
+        <a href="index.html" class="back-button">← Return to Home</a>
+        <h1>SQL Cheat Sheet</h1>
+    </header>
+
+    <main class="case-study">
+        <section>
+            <section>
+                <h2>SQL Cheat Sheet</h2>
+                <p>SQL fundamental queries to advanced techniques, organized logically for quick reference.</p>
+                <div class="image-row">
+                    <a href="assets/sql.png" onclick="openLightbox(event, this.href)"><img src="assets/sql.png" alt="Vue 1"></a>
+            </section>
+
+            <h2>File Links</h2>
+            <p>You can download and the Cheat Sheet  here. </p>
+            <a href="https://github.com/CoGfr/SQL-CheatSheet/blob/e69ee199b72461b32694ec84e14cb66a1e8fc19f/Ultimate%20SQL%20Cheatsheet.pdf" target="_blank" rel="noopener noreferrer" class="download-link">
+                SQL Cheat Sheet
+            </a>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(event, imgSrc) {
+            event.preventDefault(); // Empêche d'ouvrir l'image dans un nouvel onglet
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = "block";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
